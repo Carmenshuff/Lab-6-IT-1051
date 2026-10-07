@@ -1,0 +1,70 @@
+# Name: Carmen Huff
+# Course: IT-1051 - Introduction to Programming
+# Lab: Lab 6
+ 
+# -----------------------------------
+# Problem 1 - Membership Operators
+# -----------------------------------
+ 
+sentence = "Python is a great programming language"
+print("Sentence:", sentence)
+ 
+word = input("Enter a word to search for: ")
+ 
+if word in sentence:
+print(f'"{word}" was found in the sentence.')
+else:
+print(f'"{word}" was not found in the sentence.')
+ 
+favorite_foods = ["pizza", "sushi", "tacos", "pasta", "burgers"]
+print("\nFavorite foods:", ", ".join(favorite_foods))
+ 
+food = input("Enter a food: ")
+ 
+if food in favorite_foods:
+print(f'"{food}" is one of your favorite foods!')
+else:
+print(f'"{food}" is not one of your favorite foods.')
+ 
+# -----------------------------------
+# Problem 2 - Input Validation
+# -----------------------------------
+ 
+temperature = float(input("\nEnter temperature in Fahrenheit: "))
+ 
+if -100 <= temperature <= 150:
+ 
+celsius = (temperature - 32) * 5 / 9
+print(f"{temperature:.1f}°F is {celsius:.1f}°C")
+ 
+if temperature < 32:
+description = "Freezing"
+elif temperature <= 59:
+description = "Cold"
+elif temperature <= 79:
+description = "Comfortable"
+elif temperature <= 99:
+description = "Warm"
+else:
+description = "Hot"
+ 
+print("Description:", description)
+ 
+else:
+print("Error: Temperature must be between -100 and 150 degrees Fahrenheit.")
+ 
+# -----------------------------------
+# Problem 3 - Conditional Expressions
+# -----------------------------------
+ 
+num1 = float(input("\nEnter first number: "))
+num2 = float(input("Enter second number: "))
+ 
+larger = num1 if num1 > num2 else num2
+print("The larger number is:", larger)
+ 
+even_odd = "even" if num1 % 2 == 0 else "odd"
+print(f"{num1} is {even_odd}")
+ 
+positive_check = "positive" if num2 > 0 else "non-positive"
+print(f"{num2} is {positive_check}")
